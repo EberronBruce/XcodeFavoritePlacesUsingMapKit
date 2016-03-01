@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import MapKit
+import iAd
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
 
@@ -27,6 +28,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         self.tableView.delegate = self
         
         //createTestFavoritePlace()
+        
+        //Display ad
+        self.canDisplayBannerAds = true
     }
     
     //Get favorites from core data

@@ -18,6 +18,7 @@
 		7A30A4711C85604D00D69266 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A30A4701C85604D00D69266 /* MapKit.framework */; };
 		7A30A4751C85686000D69266 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A4741C85686000D69266 /* MapTableViewCell.swift */; };
 		7A30A4771C858D4C00D69266 /* NewFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A4761C858D4C00D69266 /* NewFavoriteViewController.swift */; };
+		7A30A4791C85EDF500D69266 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A30A4781C85EDF500D69266 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7A30A4701C85604D00D69266 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7A30A4741C85686000D69266 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		7A30A4761C858D4C00D69266 /* NewFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFavoriteViewController.swift; sourceTree = "<group>"; };
+		7A30A4781C85EDF500D69266 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A30A4791C85EDF500D69266 /* iAd.framework in Frameworks */,
 				7A30A4711C85604D00D69266 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +54,7 @@
 		7A30A44B1C849D4800D69266 = {
 			isa = PBXGroup;
 			children = (
+				7A30A4781C85EDF500D69266 /* iAd.framework */,
 				7A30A4701C85604D00D69266 /* MapKit.framework */,
 				7A30A4561C849D4900D69266 /* My Favorite Places */,
 				7A30A4551C849D4900D69266 /* Products */,
