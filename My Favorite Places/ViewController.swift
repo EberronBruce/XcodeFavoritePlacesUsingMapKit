@@ -26,7 +26,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        createTestFavoritePlace()
+        //createTestFavoritePlace()
     }
     
     //Get favorites from core data

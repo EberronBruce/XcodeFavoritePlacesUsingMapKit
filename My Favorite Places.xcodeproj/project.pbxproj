@@ -17,6 +17,7 @@
 		7A30A46F1C84A12E00D69266 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A46D1C84A12E00D69266 /* Favorite.swift */; };
 		7A30A4711C85604D00D69266 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A30A4701C85604D00D69266 /* MapKit.framework */; };
 		7A30A4751C85686000D69266 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A4741C85686000D69266 /* MapTableViewCell.swift */; };
+		7A30A4771C858D4C00D69266 /* NewFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A4761C858D4C00D69266 /* NewFavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7A30A46D1C84A12E00D69266 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = ../Favorite.swift; sourceTree = "<group>"; };
 		7A30A4701C85604D00D69266 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7A30A4741C85686000D69266 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		7A30A4761C858D4C00D69266 /* NewFavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				7A30A4571C849D4900D69266 /* AppDelegate.swift */,
 				7A30A4591C849D4900D69266 /* ViewController.swift */,
+				7A30A4761C858D4C00D69266 /* NewFavoriteViewController.swift */,
 				7A30A4741C85686000D69266 /* MapTableViewCell.swift */,
 				7A30A46C1C84A12E00D69266 /* Favorite+CoreDataProperties.swift */,
 				7A30A46D1C84A12E00D69266 /* Favorite.swift */,
@@ -153,6 +156,7 @@
 			files = (
 				7A30A46F1C84A12E00D69266 /* Favorite.swift in Sources */,
 				7A30A45A1C849D4900D69266 /* ViewController.swift in Sources */,
+				7A30A4771C858D4C00D69266 /* NewFavoriteViewController.swift in Sources */,
 				7A30A4751C85686000D69266 /* MapTableViewCell.swift in Sources */,
 				7A30A46E1C84A12E00D69266 /* Favorite+CoreDataProperties.swift in Sources */,
 				7A30A4581C849D4900D69266 /* AppDelegate.swift in Sources */,
