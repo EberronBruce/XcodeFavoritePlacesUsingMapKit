@@ -10,12 +10,14 @@ import UIKit
 import MapKit
 import CoreData
 
-class NewFavoriteViewController: UIViewController {
+class NewFavoriteViewController: UIViewController,CLLocationManagerDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var map: MKMapView!
     
     var locationManager : CLLocationManager?
+    
+    var firstTime : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,19 @@ class NewFavoriteViewController: UIViewController {
         
         self.locationManager = CLLocationManager()
         self.locationManager?.requestWhenInUseAuthorization()
+        
+        self.locationManager?.delegate = self
+        self.locationManager?.startUpdatingLocation()
 
 
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if firstTime == true {
+            let region = MKCoordinateRegionMakeWithDistance((self.locationManager!.location!.coordinate), 10000, 10000)
+            self.map.setRegion(region, animated: false)
+            self.firstTime = false
+        }
     }
 
     @IBAction func doneTapped(sender: AnyObject) {
