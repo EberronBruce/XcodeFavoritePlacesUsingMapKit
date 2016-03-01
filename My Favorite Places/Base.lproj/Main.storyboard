@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ChK-Ei-MLB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Favorite Places-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Favorite_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,86 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVP-06-gbZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapCell" rowHeight="200" id="V8B-Xk-nRf" customClass="MapTableViewCell" customModule="My_Favorite_Places" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V8B-Xk-nRf" id="8WV-19-eWg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXH-ZE-AKr">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="gas-CH-AtH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwf-83-dWP">
+                                                    <rect key="frame" x="0.0" y="48" width="600" height="151"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LXH-ZE-AKr" firstAttribute="top" secondItem="8WV-19-eWg" secondAttribute="top" id="5k5-WL-iBe"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gwf-83-dWP" secondAttribute="trailing" id="GVX-UM-tTm"/>
+                                                <constraint firstAttribute="trailing" secondItem="LXH-ZE-AKr" secondAttribute="trailing" constant="8" id="HAe-hP-KBV"/>
+                                                <constraint firstItem="Gwf-83-dWP" firstAttribute="top" secondItem="LXH-ZE-AKr" secondAttribute="bottom" constant="8" id="RzV-gE-iUR"/>
+                                                <constraint firstItem="LXH-ZE-AKr" firstAttribute="leading" secondItem="8WV-19-eWg" secondAttribute="leading" constant="8" id="XnQ-Q5-9Dh"/>
+                                                <constraint firstItem="Gwf-83-dWP" firstAttribute="leading" secondItem="8WV-19-eWg" secondAttribute="leading" id="aTv-4d-cU0"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gwf-83-dWP" secondAttribute="bottom" id="e8J-NL-VrH"/>
+                                                <constraint firstItem="Gwf-83-dWP" firstAttribute="top" secondItem="LXH-ZE-AKr" secondAttribute="bottom" constant="8" id="iOa-co-tDB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteMapView" destination="Gwf-83-dWP" id="qWw-Be-Etp"/>
+                                            <outlet property="favoriteNameLabel" destination="LXH-ZE-AKr" id="2if-fK-yc4"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cVP-06-gbZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6gv-Ip-adT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cVP-06-gbZ" secondAttribute="bottom" id="Bf8-HM-zTu"/>
+                            <constraint firstItem="cVP-06-gbZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rym-zt-akm"/>
+                            <constraint firstAttribute="trailing" secondItem="cVP-06-gbZ" secondAttribute="trailing" id="uDU-QV-LNE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Favorite Places" id="gN9-DE-qqF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="AOU-Ib-SqG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="cVP-06-gbZ" id="pGm-nO-fvU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1192" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dqv-Fv-aCu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ChK-Ei-MLB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u08-a2-qpw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rtn-NA-6fi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trr-oe-Sab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="337"/>
         </scene>
     </scenes>
 </document>
